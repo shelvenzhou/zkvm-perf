@@ -225,10 +225,6 @@ impl Display for ProgramId {
             ProgramId::ZKTLSVerify256 => write!(f, "zktls-verify-256"),
             ProgramId::ZKTLSVerify1024 => write!(f, "zktls-verify-1024"),
             ProgramId::ZKTLSVerify2048 => write!(f, "zktls-verify-2048"),
-            ProgramId::ZKTLSVerify16 => write!(f, "zktls-verify-16"),
-            ProgramId::ZKTLSVerify256 => write!(f, "zktls-verify-256"),
-            ProgramId::ZKTLSVerify1024 => write!(f, "zktls-verify-1024"),
-            ProgramId::ZKTLSVerify2048 => write!(f, "zktls-verify-2048"),
         }
     }
 }
