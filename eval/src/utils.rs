@@ -58,8 +58,8 @@ pub fn get_elf(args: &EvalArgs) -> String {
         program_dir += "-";
         program_dir += args.prover.to_string().as_str();
     }
-    if program_dir.starts_with("zktls-verify") {
-        program_dir = "zktls-att-verification".to_string();
+    if program_dir.starts_with("zktls-verify"){
+        program_dir = "zktls".to_string();
         program_dir += "-";
         program_dir += args.prover.to_string().as_str();
     }
