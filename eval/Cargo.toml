@@ -18,7 +18,7 @@ serde_json = "1.0"
 chrono = "0.4.38"
 
 # sp1
-sp1-prover = { version = "4.0.0-rc.10", features = ["native-gnark"] }
+sp1-prover = { version = "4.1.7", features = ["native-gnark"] }
 sp1-core-executor = { version = "4.0.0-rc.10", features = ["profiling"] }
 sp1-core-machine = { version = "4.0.0-rc.10" }
 sp1-cuda = { version = "4.0.0-rc.10", optional = true }
