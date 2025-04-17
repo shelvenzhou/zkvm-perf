@@ -10,6 +10,10 @@ zktls-att-verification = { git = "https://github.com/primus-labs/zktls-att-verif
 
 sp1-zkvm = "4.0.0-rc.10"
 
+[patch.crates-io]
+k256 = { git = "https://github.com/sp1-patches/elliptic-curves", tag = "patch-k256-13.4-sp1-4.1.0" }
+ecdsa-core = { git = "https://github.com/sp1-patches/signatures", package = "ecdsa", tag = "ecdsa-v0.16.9-patch-v3.3.0" }
+
 [features]
 risc0 = []
 sp1 = []
