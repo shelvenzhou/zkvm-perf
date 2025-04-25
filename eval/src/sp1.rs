@@ -14,6 +14,8 @@ use sp1_prover::{components::CpuProverComponents, utils::get_cycles, SP1Prover};
 use sp1_prover::HashableKey;
 
 use serde::{Deserialize, Serialize};
+use zktls_att_verification::verification_data::VerifyingDataOpt;
+
 
 #[cfg(feature = "cuda")]
 use sp1_cuda::SP1CudaProver;
@@ -213,6 +215,7 @@ impl SP1Evaluator {
                 let verifying_data =
                     fs::read_to_string("fixtures/zktls/data/bench16.json").unwrap();
 
+                let verifying_data: VerifyingDataOpt = serde_json::from_str(&verifying_data).unwrap();
                 stdin.write(&verifying_data);
             }
             ProgramId::ZKTLSVerify256 => {
@@ -224,7 +227,8 @@ impl SP1Evaluator {
 
                 let verifying_data =
                     fs::read_to_string("fixtures/zktls/data/bench256.json").unwrap();
-
+                    
+                let verifying_data: VerifyingDataOpt = serde_json::from_str(&verifying_data).unwrap();
                 stdin.write(&verifying_data);
             }
             ProgramId::ZKTLSVerify1024 => {
@@ -236,7 +240,8 @@ impl SP1Evaluator {
 
                 let verifying_data =
                     fs::read_to_string("fixtures/zktls/data/bench1024.json").unwrap();
-
+                
+                let verifying_data: VerifyingDataOpt = serde_json::from_str(&verifying_data).unwrap();
                 stdin.write(&verifying_data);
             }
             ProgramId::ZKTLSVerify2048 => {
@@ -249,6 +254,7 @@ impl SP1Evaluator {
                 let verifying_data =
                     fs::read_to_string("fixtures/zktls/data/bench2048.json").unwrap();
 
+                let verifying_data: VerifyingDataOpt = serde_json::from_str(&verifying_data).unwrap();
                 stdin.write(&verifying_data);
             }
             _ => {}
